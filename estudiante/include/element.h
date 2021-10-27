@@ -15,11 +15,11 @@ template <class T>
 struct element {
     T value;
     T maximum;
-    friend ostream &operator<<(ostream &os, element<T> &x);
+    template <class U> friend ostream &operator<<(ostream &os, element<U> &out);
 };
 
-template <class T>
-ostream &operator<<(ostream &os, element<T> &out) {
+template <class U>
+ostream &operator<<(ostream &os, element<U> &out) {
     os << out.value << "|" << out.maximum;
     return os;
 }
