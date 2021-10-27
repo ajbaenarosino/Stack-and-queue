@@ -1,0 +1,7 @@
+/home/alejandro/Escritorio/ED/Practica3/Stack-and-queue/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/alejandro/Escritorio/ED/Practica3/Stack-and-queue/cmake-build-debug/CMakeFiles/doc_doxygen.dir
+/home/alejandro/Escritorio/ED/Practica3/Stack-and-queue/cmake-build-debug/CMakeFiles/maxstack.dir
+/home/alejandro/Escritorio/ED/Practica3/Stack-and-queue/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/alejandro/Escritorio/ED/Practica3/Stack-and-queue/cmake-build-debug/CMakeFiles/pila_max.dir
+/home/alejandro/Escritorio/ED/Practica3/Stack-and-queue/cmake-build-debug/CMakeFiles/maxqueue.dir
+/home/alejandro/Escritorio/ED/Practica3/Stack-and-queue/cmake-build-debug/CMakeFiles/cola_max.dir
