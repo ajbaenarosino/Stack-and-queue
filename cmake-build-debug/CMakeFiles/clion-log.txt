@@ -1,5 +1,0 @@
-/snap/clion/169/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/alejandro/Escritorio/ED/Practica3/Stack-and-queue
-Doxygen build started
--- Configuring done
--- Generating done
--- Build files have been written to: /home/alejandro/Escritorio/ED/Practica3/Stack-and-queue/cmake-build-debug
