@@ -1,6 +1,6 @@
 /**
  * @file maxqueue.h
- * @brief  Archivo de especificación del TDA MaxQueue
+ * @brief Specification file of the MaxQueue ADT
  * @authors Álvaro Jesús Baena Rosino \n Alejandro Torres Martínez
  */
 
@@ -24,7 +24,7 @@ class MaxQueue
         /**
          * @brief The stack that must be used to emulate a queue
         */
-        stack<element<T>> Stack;
+        stack<Element<T>> Stack;
 
         /**
          * @brief Private method which copy the content from a vector to the stack
@@ -60,7 +60,7 @@ class MaxQueue
         /**
          * @brief Constructor with parameters 
          * @param data the array from which obtain the data to copy in the stack
-         * @param n the number of elements in the array
+         * @param n the number of Es in the array
         */
         MaxQueue<T>(const T* data, const int n);
 
@@ -74,13 +74,13 @@ class MaxQueue
          * @brief The default queue consultor
          * @return It returns the first element of the queue (const)
         */
-        const element<T> &front() const;
+        const Element<T> &front() const;
 
         /**
          * @brief The default queue modificator
          * @return It returns the first element of the queue (not const)
         */
-        element<T> &front();
+        Element<T> &front();
 
         /**
          * @brief The size consultor
@@ -138,12 +138,12 @@ MaxQueue<T>::MaxQueue(const T *data, const int n) {
 }
 
 template <class T>
-const element<T> &MaxQueue<T>::front() const {
+const Element<T> &MaxQueue<T>::front() const {
     return Stack.top();
 }
 
 template <class T>
-element<T> &MaxQueue<T>::front() {
+Element<T> &MaxQueue<T>::front() {
     return Stack.top();
 }
 
@@ -154,29 +154,30 @@ const int MaxQueue<T>::size() const {
 
 template <class T>
 void MaxQueue<T>::pop() {
-    Stack.pop();
+    if (Stack.size() > 0) {
+        Stack.pop();
+    }   
 }
 
 template <class T>
 void MaxQueue<T>::push_back(T data) {
-    element<T> element_T_aux;
+    Element<T> element_T_aux;
     if (Stack.empty()) {
         element_T_aux.value = element_T_aux.maximum = data;
         Stack.push(element_T_aux);
     } else {
-        stack<element<T>> aux;
+        stack<Element<T>> aux;
         T max = data;
         while(!Stack.empty()) {
             aux.push(Stack.top());
             Stack.pop();
         }
-        element_T_aux.maximum = (max > element_T_aux.maximum) ? max : element_T_aux.maximum;
+        element_T_aux.maximum = max;
         element_T_aux.value = data;
         Stack.push(element_T_aux);
         while(!aux.empty()) {
             element_T_aux = aux.top();
             element_T_aux.maximum = (max > element_T_aux.maximum) ? max : element_T_aux.maximum;
-            element_T_aux.value = aux.top().value;
             Stack.push(element_T_aux);
             aux.pop();
         }
@@ -217,7 +218,7 @@ bool MaxQueue<T>::empty() {
 template <class U>
 ostream &operator<<(ostream &os, MaxQueue<U> &out) {
     if (out.size() > 0) {
-        stack<element<U>> aux = out.Stack;
+        stack<Element<U>> aux = out.Stack;
         while (!aux.empty()) {
             os << aux.top() << " ";
             aux.pop();
