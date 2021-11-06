@@ -24,7 +24,7 @@ class MaxQueue
         /**
          * @brief The stack that must be used to emulate a queue
         */
-        stack<Element<T>> Stack;
+        stack<element<T>> Stack;
 
         /**
          * @brief Private method which copy the content from a vector to the stack
@@ -74,13 +74,13 @@ class MaxQueue
          * @brief The default queue consultor
          * @return It returns the first element of the queue (const)
         */
-        const Element<T> &front() const;
+        const element<T> &front() const;
 
         /**
          * @brief The default queue modificator
          * @return It returns the first element of the queue (not const)
         */
-        Element<T> &front();
+        element<T> &front();
 
         /**
          * @brief The size consultor
@@ -138,12 +138,12 @@ MaxQueue<T>::MaxQueue(const T *data, const int n) {
 }
 
 template <class T>
-const Element<T> &MaxQueue<T>::front() const {
+const element<T> &MaxQueue<T>::front() const {
     return Stack.top();
 }
 
 template <class T>
-Element<T> &MaxQueue<T>::front() {
+element<T> &MaxQueue<T>::front() {
     return Stack.top();
 }
 
@@ -161,12 +161,12 @@ void MaxQueue<T>::pop() {
 
 template <class T>
 void MaxQueue<T>::push_back(T data) {
-    Element<T> element_T_aux;
+    element<T> element_T_aux;
     if (Stack.empty()) {
         element_T_aux.value = element_T_aux.maximum = data;
         Stack.push(element_T_aux);
     } else {
-        stack<Element<T>> aux;
+        stack<element<T>> aux;
         T max = data;
         while(!Stack.empty()) {
             aux.push(Stack.top());
@@ -187,6 +187,7 @@ void MaxQueue<T>::push_back(T data) {
 template <class T>
 MaxQueue<T> &MaxQueue<T>::operator=(MaxQueue<T> data) {
     Stack = data.Stack;
+    return *this;
 }
 
 template <class T>
@@ -218,7 +219,7 @@ bool MaxQueue<T>::empty() {
 template <class U>
 ostream &operator<<(ostream &os, MaxQueue<U> &out) {
     if (out.size() > 0) {
-        stack<Element<U>> aux = out.Stack;
+        stack<element<U>> aux = out.Stack;
         while (!aux.empty()) {
             os << aux.top() << " ";
             aux.pop();

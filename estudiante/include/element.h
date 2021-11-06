@@ -16,7 +16,7 @@ using namespace std;
 */
 
 template <class T>
-struct Element {
+struct element {
     /**
      * @brief The value itself
     */
@@ -32,21 +32,21 @@ struct Element {
      * @param v The value to be asigned
      * @param max The associated maximum to be assigned
     */
-    Element(int v = 0, int max = 0);
+    element(int v = 0, int max = 0);
 
     /**
      * @brief The output operator
      * @param os The ostream object in which the object will be printed
      * @param out The element to be printed
     */
-    template <class U> friend ostream &operator<<(ostream &os, const Element<U> &out);
+    template <class U> friend ostream &operator<<(ostream &os, const element<U> &out);
 };
 
 template <class T>
-Element<T>::Element(int v, int max): value(v), maximum(max){}
+element<T>::element(int v, int max): value(v), maximum(max){}
 
 template <class U>
-ostream &operator<<(ostream &os, const Element<U> &out) {
+ostream &operator<<(ostream &os, const element<U> &out) {
     os << out.value << "," << out. maximum;
     return os;
 }
