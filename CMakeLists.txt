@@ -16,7 +16,7 @@ if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/pila_max.cpp)
 endif()
 
 if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/cola_max.cpp)
-    add_executable(cola_max ${BASE_FOLDER}/src/cola_max.cpp)
+    add_executable(cola_max ${BASE_FOLDER}/src/cola_max.cpp estudiante/src/maxqueue.cpp)
     target_link_libraries(cola_max maxqueue)
 endif()
 
