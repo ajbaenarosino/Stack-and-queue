@@ -1,7 +1,7 @@
 /**
  * @file maxstack.h
- * @brief  Archivo de especificación del TDA MaxStack
- * @author
+ * @brief  Specification file of the MaxStack ADT
+ * @author Álvaro Jesús Baena Rosino \n Alejandro Torres Martínez
  */
 
 #include <cstdlib>
@@ -68,7 +68,7 @@ public:
      * @brief Assign operator
      * @param data the object to copy from
     */
-    MaxStack<T> &operator=(const MaxQueue<T> data);
+    MaxStack<T> &operator=(const MaxStack<T> data);
 
     /**
      * @brief The default stack consultor
@@ -170,14 +170,13 @@ void MaxStack<T>::push(T data) {
             aux.push(Queue.front());
             Queue.pop();
         }
-        element_T_aux.maximum = (max > element_T_aux.maximum) ? max : element_T_aux.maximum;
+        element_T_aux.maximum = max;
         element_T_aux.value = data;
-        Stack.push(element_T_aux);
-        while(!aux.empty()) {
-            element_T_aux = aux.top();
-            element_T_aux.maximum = (max > element_T_aux.maximum) ? max : element_T_aux.maximum;
-            element_T_aux.value = aux.top().value;
-            Stack.push(element_T_aux);
+        if(aux.front().maximum > element_T_aux.maximum)
+            element_T_aux.maximum = aux.front().maximum;
+        Queue.push(element_T_aux);
+        while(!aux.empty()){
+            Queue.push(aux.front());
             aux.pop();
         }
     }

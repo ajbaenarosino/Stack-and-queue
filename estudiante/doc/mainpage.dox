@@ -1,11 +1,25 @@
-/*! \mainpage Título de la página principal
+/*! \mainpage Documentation ADT MaxStack & MaxQueue
 
-# Introducción
+# Introduction
 
-A RELLENAR POR EL ESTUDIANTE
+MaxStack and MaxQueue are ADT's that allow calculating the maximum of the elements inserted into a stack and a queue, respectively, with the same operation as these.
 
-# Ejecutables
+<hr>
 
-A RELLENAR POR EL ESTUDIANTE
+# Executables
+
+## Pila Max
+Main function to test the ADT of MaxStack. Insert a data or take out and display the last element entered of the stack, if the character used is '.'.
+
+> __pila_max__ \<PlainTextFile\> \<Data\>
+@param "<PlainTextFile>" Plain text file from which to take the data to insert into the stack.
+@param "<Data>" Data to insert into the stack.
+
+## Cola Max
+Main function to test the ADT of MaxQueue. Insert a data or take out and display the last element entered of the queue, if the character used is '.'.
+
+> __cola_max__ \<PlainTextFile\> \<Data\>
+@param "<PlainTextFile>" Plain text file from which to take the data to insert into the queue.
+@param "<Data>" Data to insert into the queue.
 
 */

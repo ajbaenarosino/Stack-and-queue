@@ -17,7 +17,7 @@ int main(int argc, char *argv[]){
     // // Run the current exercise
     MaxQueue<int> queue;
     ifstream in;
-    if (argv[1][0] == '.' && argv[1][1] == '/' || argv[1][0] == '/') { // Additional functionality: You can test the queue with a plaint text file, apart from the default args entry
+    if (argv[1][0] == '.' && argv[1][1] == '/' || argv[1][0] == '/') { // Additional functionality: You can test the queue with a plain text file, apart from the default args entry
         in.open(argv[1]);
         if(in.good()) {
             while(!in.eof()) {
@@ -43,7 +43,6 @@ int main(int argc, char *argv[]){
             }
         }
     }
-    
     in.close();
     return 0;
 }

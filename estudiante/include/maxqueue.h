@@ -15,108 +15,108 @@
 using namespace std;
 
 /**
- * @brief A template class to represent a queue using stacks 
+ * @brief A template class to represent a queue using stacks
 */
 
 template <class T>
 class MaxQueue
 {
-        /**
-         * @brief The stack that must be used to emulate a queue
-        */
-        stack<element<T>> Stack;
+    /**
+     * @brief The stack that must be used to emulate a queue
+    */
+    stack<element<T>> Stack;
 
-        /**
-         * @brief Private method which copy the content from a vector to the stack
-         * @param data the vector to copy from
-        */
-        void copy(vector<T> data);
+    /**
+     * @brief Private method which copy the content from a vector to the stack
+     * @param data the vector to copy from
+    */
+    void copy(vector<T> data);
 
-        /**
-         * @brief Private method which copy the content from an array to the stack
-         * @param data the array to copy from
-         * @param n The number of T objects in the @p data vector
-        */
-        void copy(T* data, int n);
+    /**
+     * @brief Private method which copy the content from an array to the stack
+     * @param data the array to copy from
+     * @param n The number of T objects in the @p data vector
+    */
+    void copy(T* data, int n);
 
-    public:
-        /**
-         * @brief Default constructor of the class
-        */
-        MaxQueue();
+public:
+    /**
+     * @brief Default constructor of the class
+    */
+    MaxQueue();
 
-        /**
-         * @brief Copy constructor
-         * @param data the MaxQueue<T> to copy from
-        */
-        MaxQueue<T>(const MaxQueue<T> &data);
+    /**
+     * @brief Copy constructor
+     * @param data the MaxQueue<T> to copy from
+    */
+    MaxQueue<T>(const MaxQueue<T> &data);
 
-        /**
-         * @brief Constructor with parameters
-         * @param data the vector from which obtain the data to copy in the stack
-        */
-        MaxQueue<T>(const vector<T> &data);
+    /**
+     * @brief Constructor with parameters
+     * @param data the vector from which obtain the data to copy in the stack
+    */
+    MaxQueue<T>(const vector<T> &data);
 
-        /**
-         * @brief Constructor with parameters 
-         * @param data the array from which obtain the data to copy in the stack
-         * @param n the number of Es in the array
-        */
-        MaxQueue<T>(const T* data, const int n);
+    /**
+     * @brief Constructor with parameters
+     * @param data the array from which obtain the data to copy in the stack
+     * @param n the number of Es in the array
+    */
+    MaxQueue<T>(const T* data, const int n);
 
-        /**
-         * @brief Assign operator
-         * @param data the object to copy from
-        */
-        MaxQueue<T> &operator=(const MaxQueue<T> data);
+    /**
+     * @brief Assign operator
+     * @param data the object to copy from
+    */
+    MaxQueue<T> &operator=(const MaxQueue<T> data);
 
-        /**
-         * @brief The default queue consultor
-         * @return It returns the first element of the queue (const)
-        */
-        const element<T> &front() const;
+    /**
+     * @brief The default queue consultor
+     * @return It returns the first element of the queue (const)
+    */
+    const element<T> &front() const;
 
-        /**
-         * @brief The default queue modificator
-         * @return It returns the first element of the queue (not const)
-        */
-        element<T> &front();
+    /**
+     * @brief The default queue modificator
+     * @return It returns the first element of the queue (not const)
+    */
+    element<T> &front();
 
-        /**
-         * @brief The size consultor
-         * @return It returns the size of the queue
-        */
-        const int size() const;
+    /**
+     * @brief The size consultor
+     * @return It returns the size of the queue
+    */
+    const int size() const;
 
-        /**
-         * @brief It deletes the first element of the queue
-        */
-        void pop();
+    /**
+     * @brief It deletes the first element of the queue
+    */
+    void pop();
 
-        /**
-         * @brief It adds a new T eleemnt to the queue
-         * @param data the element to be added
-        */
-        void push_back(T data);
+    /**
+     * @brief It adds a new T eleemnt to the queue
+     * @param data the element to be added
+    */
+    void push_back(T data);
 
-        /**
-         * @brief It deletes all the elements in the queue
-        */
-        void destroy();
+    /**
+     * @brief It deletes all the elements in the queue
+    */
+    void destroy();
 
-        /**
-         * @brief An operator to know if the container is empty or not
-         * @return True if it is empty and false if it is not
-        */
-        bool empty();
+    /**
+     * @brief An operator to know if the container is empty or not
+     * @return True if it is empty and false if it is not
+    */
+    bool empty();
 
-        /**
-         * @brief The << operator
-         * @param os the ostream variable in which the object will be printed
-         * @param out the MaxQueue object to be printed
-         * @return a reference to the modified ostream object
-        */
-        template <class U> friend ostream &operator<<(ostream &os, MaxQueue<U> &out);
+    /**
+     * @brief The << operator
+     * @param os the ostream variable in which the object will be printed
+     * @param out the MaxQueue object to be printed
+     * @return a reference to the modified ostream object
+    */
+    template <class U> friend ostream &operator<<(ostream &os, MaxQueue<U> &out);
 };
 
 template <class T>
@@ -156,7 +156,7 @@ template <class T>
 void MaxQueue<T>::pop() {
     if (Stack.size() > 0) {
         Stack.pop();
-    }   
+    }
 }
 
 template <class T>
