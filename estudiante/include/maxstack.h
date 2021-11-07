@@ -1,6 +1,6 @@
 /**
  * @file maxstack.h
- * @brief  Specification file of the MaxStack TDA
+ * @brief  Specification file of the MaxStack ADT
  * @author Álvaro Jesús Baena Rosino \n Alejandro Torres Martínez
  */
 

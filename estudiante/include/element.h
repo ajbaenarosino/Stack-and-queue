@@ -1,6 +1,6 @@
 /**
  * @file maxqueue.h
- * @brief Specification file of the element TDA
+ * @brief Specification file of the element ADT
  * @authors Álvaro Jesús Baena Rosino \n Alejandro Torres Martínez
  */
 

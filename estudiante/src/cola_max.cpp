@@ -1,6 +1,6 @@
 /**
  * @file cola_max.cpp
- * @brief Main function to test the TDA of MaxQueue
+ * @brief Main function to test the ADT of MaxQueue
  * @authors Álvaro Jesús Baena Rosino \n Alejandro Torres Martínez
  */
 

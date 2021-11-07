@@ -1,6 +1,6 @@
 /**
  * @file cola_max.cpp
- * @brief Main function to test the TDA of MaxStack
+ * @brief Main function to test the ADT of MaxStack
  * @authors Álvaro Jesús Baena Rosino \n Alejandro Torres Martínez
  */
 

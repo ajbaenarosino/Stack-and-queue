@@ -1,8 +1,8 @@
-/*! \mainpage Documentation TDA MaxStack & MaxQueue
+/*! \mainpage Documentation ADT MaxStack & MaxQueue
 
 # Introduction
 
-MaxStack and MaxQueue are TDA's that allow calculating the maximum of the elements inserted into a stack and a queue, respectively, with the same operation as these.
+MaxStack and MaxQueue are ADT's that allow calculating the maximum of the elements inserted into a stack and a queue, respectively, with the same operation as these.
 
 <hr>
 
